@@ -87,6 +87,12 @@ To allow the Chrome extension to talk to your local Python server securely, we u
 
 ---
 
+## Authors
+    Vrishin M (Complete Project)
+    Mithun Kartick (Last minute fixes)
+---
+
+
 ## 📂 Project Structure
 
 ```text
@@ -95,3 +101,4 @@ BaitSense/
 ├── processing.py       # AI Logic (OpenCV/Numpy)
 ├── extension           # Extension Related Files (manifest.json, content.js, /images)
 └── thumbnails/         # Folder where images are saved temporarily
+
