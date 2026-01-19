@@ -1,4 +1,4 @@
-# 🎣 BaitSense: AI Clickbait Detector for YouTube
+# BaitSense: AI Clickbait Detector for YouTube
 
 BaitSense is a Chrome Extension that uses local AI processing to analyze YouTube video thumbnails and titles in real-time. It determines if a video is "Clickbait" or legitimate by sending data to a local Python server via a secure ngrok tunnel.
 
