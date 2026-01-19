@@ -1,0 +1,7 @@
+path: 
+train: 
+val: 
+
+# Classes
+nc: 1                   # number of classes
+names: ['arrow']    # class names (order must match classes.txt)

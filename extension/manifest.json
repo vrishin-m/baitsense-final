@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "BaitSense",
+  "version": "1.0",
+  "permissions": ["activeTab", "storage"],
+  "icons" : {
+    "48": "images/48x48.png",
+    "128": "images/128x128.png"
+  },
+  "host_permissions": [
+    "http://127.0.0.1:9870/*",
+    "https://localhost:9870/*",
+    "https://unpersonifying-proappropriation-jackie.ngrok-free.dev/*",
+    "https://*.ngrok-free.app/*",
+    "https://*.trycloudflare.com/*", 
+    "https://www.youtube.com/*"
+],
+  
+  "action": {
+    "default_popup": "popup.html"
+  },
+    "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+  
+  }
+  

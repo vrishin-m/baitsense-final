@@ -1,0 +1,31 @@
+import easyocr
+import sys
+import nlp
+import torch
+torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+def get_reader():
+    if not hasattr(sys.modules[__name__], 'reader'):
+        setattr(sys.modules[__name__], 'reader', easyocr.Reader(['en'], gpu=True))
+    return getattr(sys.modules[__name__], 'reader')
+
+def extract_text_from_image(image_path):
+    
+    reader = get_reader()
+    results = reader.readtext(image_path)
+    extracted_texts = [text for _, text, _ in results]
+    return ' '.join(extracted_texts)
+
+
+
+
+
+
+def ocr_score(image_path):
+    results = extract_text_from_image(image_path)
+    return  nlp.predict_examples(examples=[results])
+
+
+
+
+
